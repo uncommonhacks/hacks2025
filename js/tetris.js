@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const shape = tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
             const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
             const startX = Math.floor(Math.random() * (columns - shape[0].length + 1)); // Allow rightmost positions
-            currentPiece = { shape, x: startX, y: -shape.length, color }; // Start at the very top
+            currentPiece = { shape, x: startX, y: 0, color }; // Ensure piece spawns at the very top
             pieceLockDelay = false;
 
             if (collision()) {
@@ -53,7 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
             pieceLockDelay = true;
             setTimeout(() => {
                 placePiece();
-                spawnPiece();
+                if (isGameOver()) {
+                    resetGame();
+                } else {
+                    spawnPiece();
+                }
             }, 200); // Short delay before locking and spawning new piece
         }
         render();
@@ -82,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 return false;
             });
         });
+    }
+
+    function isGameOver() {
+        return board[0].some(cell => cell !== 0);
     }
 
     function resetGame() {
