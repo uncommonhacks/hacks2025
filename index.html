@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     
         <!-- Styles -->
-        <link href="styles/tetris.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     
         <!-- External javascript -->
         <script src="js/jquery-3.6.1.min.js"></script>
@@ -28,12 +28,25 @@
         </script>
     </head>
     <body>
-        <div class = "container">
-            <p>Hello, world</p>
-        </div>
-        <div class="modal" id="tetrisModal">
-            <!-- <h2>Tetris</h2> -->
-            <canvas id="tetrisCanvas" width="200" height="400"></canvas>
+        <div id = "row">
+            <div class = "col" id = "left">
+                <div class = "container">
+                    <p style = "margin-bottom: 2em">STATISTICS</p>
+                    <div class = "section">Schedule</div>
+                    <div class = "section">About</div>
+                    <div class = "section">FAQ</div>
+                    <div class = "section">MLH Code of Conduct</div>
+                </div>
+            </div>
+            <div class = "col" id = "middle">
+                <div class = "container" id = "title">
+                    UNCOMMON HACKS
+                </div>
+                <div class = "container" id = "tetris">
+                    <canvas id="tetrisCanvas" width="200" height="400"></canvas>
+                </div>
+            </div>
+            <div class = "col"></div>
         </div>
     </body>
 </html>

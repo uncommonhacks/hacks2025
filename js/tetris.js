@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById('tetrisCanvas');
     const ctx = canvas.getContext('2d');
-    const blockSize = 20;
-    const columns = canvas.width / blockSize;
-    const rows = canvas.height / blockSize;
+    
+    // Adjust canvas size to fit the modal
+    const tetrisContainer = document.getElementById('tetris');
+    canvas.width = tetrisContainer.clientWidth - 10;
+    canvas.height = tetrisContainer.clientHeight - 20;
+    
+    const blockSize = 25;
+    const columns = Math.floor(canvas.width / blockSize);
+    const rows = Math.floor(canvas.height / blockSize);
     let board = Array.from({ length: rows }, () => Array(columns).fill(0));
     let currentPiece = null;
 
-    const tetrominoes = [
+    const tetrominoes = [ //@jack this is where u make the tetris pieces
         [[1, 1, 1, 1]], // I
         [[1, 1], [1, 1]], // O
         [[0, 1, 0], [1, 1, 1]], // T
@@ -27,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function spawnPiece() {
         const shape = tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
         const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        const startX = Math.floor(Math.random() * (columns - shape[0].length));
+        const startX = Math.floor(Math.random() * (columns - shape[0].length + 1)); // Allow rightmost positions
         currentPiece = { shape, x: startX, y: 0, color };
 
         if (collision()) {
@@ -62,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (cell) {
                     let newY = currentPiece.y + dy;
                     let newX = currentPiece.x + dx;
-                    if (newY >= rows || board[newY][newX]) {
+                    if (newY >= rows || newX >= columns || board[newY][newX]) {
                         return true;
                     }
                 }
@@ -91,5 +97,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     spawnPiece();
-    setInterval(movePieceDown, 120);
+    setInterval(movePieceDown, 300);
 });
