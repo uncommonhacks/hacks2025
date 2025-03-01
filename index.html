@@ -10,11 +10,12 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     
         <!-- Styles -->
-        <link href="style.css" rel="stylesheet">
+        <link href="styles/tetris.css" rel="stylesheet">
     
         <!-- External javascript -->
         <script src="js/jquery-3.6.1.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/tetris.js" defer></script>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CSFN5D9CD"></script>
@@ -29,6 +30,10 @@
     <body>
         <div class = "container">
             <p>Hello, world</p>
+        </div>
+        <div class="modal" id="tetrisModal">
+            <!-- <h2>Tetris</h2> -->
+            <canvas id="tetrisCanvas" width="200" height="400"></canvas>
         </div>
     </body>
 </html>
