@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Adjust canvas size to fit the modal
     const tetrisContainer = document.getElementById('tetris');
-    canvas.width = tetrisContainer.clientWidth - 10;
+    canvas.width = tetrisContainer.clientWidth - 20;
     canvas.height = tetrisContainer.clientHeight - 20;
     
     const blockSize = 25;
@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const rows = Math.floor(canvas.height / blockSize);
     let board = Array.from({ length: rows }, () => Array(columns).fill(0));
     let currentPiece = null;
+    let pieceLockDelay = false;
 
-    const tetrominoes = [ //@jack this is where u make the tetris pieces
+    const tetrominoes = [
         [[1, 1, 1, 1]], // I
         [[1, 1], [1, 1]], // O
         [[0, 1, 0], [1, 1, 1]], // T
@@ -31,23 +32,29 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function spawnPiece() {
-        const shape = tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
-        const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        const startX = Math.floor(Math.random() * (columns - shape[0].length + 1)); // Allow rightmost positions
-        currentPiece = { shape, x: startX, y: 0, color };
+        setTimeout(() => {
+            const shape = tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
+            const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            const startX = Math.floor(Math.random() * (columns - shape[0].length + 1)); // Allow rightmost positions
+            currentPiece = { shape, x: startX, y: -shape.length, color }; // Start at the very top
+            pieceLockDelay = false;
 
-        if (collision()) {
-            resetGame(); // Restart if a piece spawns in a blocked space
-        }
+            if (collision()) {
+                resetGame(); // Restart if a piece spawns in a blocked space
+            }
+        }, 200); // 200ms delay before spawning new piece
     }
 
     function movePieceDown() {
-        if (!currentPiece) return;
+        if (!currentPiece || pieceLockDelay) return;
         currentPiece.y++;
         if (collision()) {
             currentPiece.y--;
-            placePiece();
-            spawnPiece();
+            pieceLockDelay = true;
+            setTimeout(() => {
+                placePiece();
+                spawnPiece();
+            }, 200); // Short delay before locking and spawning new piece
         }
         render();
     }
