@@ -14,6 +14,7 @@ body {
     background-size: 300px;
     background-repeat: repeat;
     background-position: center;
+    font-size: 1em;
 }
 
 div {
@@ -33,8 +34,16 @@ div {
     align-items: stretch;
 }
 
-#left {
+#title {
+    font-size: 1em;
+}
+
+#left, #right {
     justify-content: end;
+}
+
+#nav {
+    padding: 12px;
 }
 
 #middle {
@@ -58,11 +67,56 @@ div {
     height: 500px;
 }
 
-p {
-    margin: 0
+.section {
+    border: 3px solid rgba(0, 0, 0, 0.25);
+    padding: 0.5em 0;
+    cursor: pointer;
+    transition: filter 0.5s;
 }
 
-.section {
-    outline: 1px solid red;
-    padding: 0.5em 0;
+.section:hover {
+    filter: brightness(0.7);
+}
+
+.section:active {
+    filter: brightness(0.4);
+    transition: none;
+}
+
+#alert {
+    margin: 0 4em 5em;
+    font-size: 0.8em;
+    padding: 2em;
+}
+
+.flash {
+    color: red;
+}
+
+#sponsors p:not(:first-child) {
+    font-size: 0.7em;
+    margin-bottom: 1.75em;
+}
+
+#sponsors a {
+    color: white;
+    text-decoration: none;
+}
+
+#sponsors a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+#sponsors a:active {
+    color: rgb(200, 200, 200);
+}
+
+#bottom {
+    padding: 12px;
+}
+
+#bottom p {
+    font-size: 0.9em;
+    margin: 1em 0;
 }
