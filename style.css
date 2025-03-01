@@ -1,37 +1,141 @@
 @font-face {
-    font-family: "Beef'd";
-    src: url("fonts/Beef'd.ttf");
+  font-family: "Beef'd";
+  src: url("fonts/Beef'd.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-html, body {
-    height: 100%;
-    background-image: url("img/background.jpeg");
-    background-size: 400px;
-    background-repeat: repeat;
-    background-position: center;
+html,
+body {
+  font-family: "Beef'd";
+  height: 100%;
+  background-image: url("img/background.jpeg");
+  background-size: 400px;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    border: 4px solid rgb(10, 12, 14);
-    border-radius: 2px;
-    background-color: rgb(47, 51, 45);
-    font-family: "Beef'd";
-    color: white;
-    display: inline-block;
-    position: fixed;
+  border: 4px solid rgb(10, 12, 14);
+  border-radius: 2px;
+  background-color: rgb(47, 51, 45);
+  font-family: "Beef'd";
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border: 4px solid #1e1e1e;
 }
 
 .container:after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    z-index: -1;
-    background: blue;
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: blue;
+}
+
+.mobile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.top-container {
+  background: #2e3734;
+  padding: 1rem;
+  border: 0.25rem solid black;
+  width: -webkit-fill-available;
+
+  #top-bar {
+    background-color: black;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: 0.25rem solid #82bdcf;
+  }
+}
+
+.logo-container {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+
+  img {
+    width: 25%;
+    margin: 20px 0;
+  }
+}
+
+.register-container {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .register-button {
+    background-color: black;
+    border: 0.25rem solid #82bdcf;
+    color: white;
+    padding: 0.6rem 1.6rem;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+
+#info-container {
+  max-width: 600px;
+  width: -webkit-fill-available;
+  max-width: 100vw;
+  background: #2e3734;
+  border: 0.25rem solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+
+  .items {
+    width: -webkit-fill-available;
+  }
+
+  .item {
+    width: inherit;
+    cursor: pointer;
+
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 0.25rem solid #82bdcf;
+
+    button {
+      width: 100%;
+      font-family: inherit;
+      background-color: transparent;
+      border: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .item-content-container {
+      margin-top: 1rem;
+      padding: 1.5rem 1rem;
+      background-color: black;
+      display: none;
+      color: white;
+      font-size: 0.6rem;
+      font-weight: normal;
+    }
+  }
 }
