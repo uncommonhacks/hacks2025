@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
         ctx.strokeStyle = 'black';
         ctx.strokeRect(x * blockSize, y * blockSize, blockSize, blockSize);
+        ctx.fillStyle = 'white';
+        ctx.fillRect(x * blockSize, y * blockSize, 3, 6);
+        ctx.fillRect(x * blockSize, y * blockSize, 6, 3);
     }
 
     function spawnPiece() {

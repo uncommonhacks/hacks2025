@@ -103,12 +103,12 @@ a {
     text-decoration: none;
 }
 
-#sponsors a:hover {
+a:not(#register):hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
 
-#sponsors a:active {
+a:not(#register):active {
     color: rgb(200, 200, 200);
 }
 
