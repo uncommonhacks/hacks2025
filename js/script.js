@@ -173,7 +173,7 @@ const canvas = document.getElementById("tetrisCanvas");
 
     // Adjust canvas size to fit the modal
     const tetrisContainer = document.getElementById("tetris");
-    canvas.width = tetrisContainer.clientWidth - 20;
+    canvas.width = tetrisContainer.clientWidth - 40;
     canvas.height = tetrisContainer.clientHeight - 20;
 
     const blockSize = 25;
@@ -308,3 +308,10 @@ function resetGame() {
   board = Array.from({ length: rows }, () => Array(columns).fill(0));
   spawnPiece();
 }
+
+$("#logo").on("mouseover", () => {
+  $("#logo").attr("src", "img/logo.svg");
+});
+$("#logo").on("mouseout", () => {
+  $("#logo").attr("src", "img/logo25notext.svg");
+});

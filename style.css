@@ -415,3 +415,9 @@ body {
     }
   }
 }
+
+#logo {
+  height: 4em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
