@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   font-family: "Beef'd";
@@ -12,6 +19,7 @@ body {
   background-image: url("img/background.jpeg");
   background-repeat: repeat;
   background-position: center;
+  background-size: 300px;
 }
 
 body {
@@ -75,8 +83,59 @@ body {
     text-align: center;
   }
 
-  #tetris {
-    height: 500px;
+  .content {
+    height: 60vh;
+    display: none;
+  }
+  
+  .inner {
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .content.shown {
+    display: block;
+  }
+
+  .content p, li {
+    font-size: 1em;
+    font-family: "Montserrat";
+    line-height: 30px;
+    padding: 0 0.5em;    
+  }
+
+  .content li {
+    font-family: "Montserrat";
+    line-height: 30px;
+    padding-right: 40px;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  .content h6 {
+    padding: 0 0.5em;
+  }
+
+  #schedule span {
+    font-family: "Beef'd";
+    font-size: 0.65em;
+    margin-right: 0.3em;
+    position: relative;
+    top: 1.5px;
+  }
+
+  #faq span {
+    font-style: italic;
+    text-decoration: underline;
+    margin-right: 0.3em;
+  }
+
+  #contact a {
+    padding: 0.75em 2em;
+    background-color: red;
+    font-family: "Beef'd";
+    border: 2px solid white;
+    font-size: 0.5em;
   }
 
   .section {
@@ -115,12 +174,12 @@ body {
     text-decoration: none;
   }
 
-  a:not(#register):hover {
+  #sponsors a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
   }
 
-  a:not(#register):active {
+  #sponsors a:active {
     color: rgb(200, 200, 200);
   }
 
@@ -194,17 +253,18 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+  }
 
-    .register-button {
-      background-color: black;
-      border: 0.25rem solid rgb(122, 170, 197);
-      color: white;
-      padding: 0.6rem 1.6rem;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+  .register-button {
+    background-color: #6abb1a;
+    border: 0.25rem solid rgb(122, 170, 197);
+    color: white;
+    padding: 0.6rem 1.6rem;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
 
   #info-container {
     max-width: 600px;
@@ -250,7 +310,60 @@ body {
     font-size: 0.8rem;
     font-weight: normal;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: "Montserrat";
   }
+
+  .item-content-container p, li {
+    font-size: 2em;
+    font-family: "Montserrat";
+    line-height: 30px;
+    padding: 0 0.5em;    
+  }
+
+  .item-content-container li {
+    font-family: "Montserrat";
+    line-height: 30px;
+    padding-right: 40px;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  .item-content-container h6 {
+    font-size: 1.3em;
+    padding: 0 0.5em;
+    font-family: "Beef'd";
+  }
+
+  .item-content-container span.schedule {
+    font-family: "Beef'd";
+    font-size: 0.65em;
+    margin-right: 0.3em;
+    position: relative;
+    top: 1.5px;
+  }
+
+  .item-content-container span.faq {
+    font-style: italic;
+    text-decoration: underline;
+    margin-right: 0.3em;
+  }
+
+  .item-content-container li {
+    margin-bottom: 1em;
+  }
+
+  .item-content-container a {
+    padding: 0.75em 2em;
+    background-color: red;
+    font-family: "Beef'd";
+    border: 2px solid white;
+    font-size: 0.5em;
+    color: white;
+    text-decoration: none;
+  }
+
+  .contact {
+    text-align: center;
   }
 
   #info-container {
@@ -286,6 +399,8 @@ body {
         justify-content: space-between;
         align-items: center;
         color: white;
+        text-align: left;
+        cursor: pointer;
       }
 
       .item-content-container {
