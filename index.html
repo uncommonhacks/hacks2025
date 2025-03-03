@@ -1,72 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Uncommon Hacks</title>
-        <meta name="description" content="Learn and build with technology with Uncommon Hacks.">
-        
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-    
-        <!-- Styles -->
-        <link href="style.css" rel="stylesheet">
-    
-        <!-- External javascript -->
-        <script src="js/jquery-3.6.1.min.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/tetris.js" defer></script>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CSFN5D9CD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-4CSFN5D9CD');
-        </script>
-    </head>
-    <body>
-        <div id = "row">
-            <div class = "col" id = "left">
-                <div class = "container" id = "alert">
-                    HACK FOR 24 HOURS
-                    <hr style = "margin: 1em 0">
-                    <span id = "prize">WIN UP TO $500</span>
-                </div>
-                <div class = "container" id = "nav">
-                    <p>STATISTICS</p>
-                    <div class = "section selected" style = "background-color: #34ebde">Schedule</div>
-                    <div class = "section" style = "background-color: #eb9f34">About</div>
-                    <div class = "section" style = "background-color: #3328c9">FAQ</div>
-                    <div class = "section" style = "background-color: #7a0cf0">MLH Code of Conduct</div>
-                    <div class = "section" style = "background-color: #b2b20d">Contact</div>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uncommon Hacks</title>
+    <meta
+      name="description"
+      content="Learn and build with technology with Uncommon Hacks." />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- External javascript -->
+    <script src="js/jquery-3.6.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/tetris.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4CSFN5D9CD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4CSFN5D9CD");
+    </script>
+  </head>
+  <body>
+    <!-- PC Layout -->
+    <div class="desktop-content">
+      <div id="row">
+        <div class="col" id="left">
+          <div class="container" id="alert">
+            HACK FOR 24 HOURS
+            <hr style="margin: 1em 0" />
+            <span id="prize">WIN UP TO $500</span>
+          </div>
+          <div class="container" id="nav">
+            <p>STATISTICS</p>
+            <div class="section selected" style="background-color: #34ebde">
+              Schedule
             </div>
-            <div class = "col" id = "middle">
-                <div class = "container" id = "title">
-                    UNCOMMON HACKS
-                </div>
-                <div class = "container" id = "tetris">
-                    <canvas id="tetrisCanvas" width="200" height="400"></canvas>
-                </div>
+            <div class="section" style="background-color: #eb9f34">About</div>
+            <div class="section" style="background-color: #3328c9">FAQ</div>
+            <div class="section" style="background-color: #7a0cf0">
+              MLH Code of Conduct
             </div>
-            <div class = "col" id = "right">
-                <div class = "container" id = "sponsors">
-                    <p style = "margin-bottom: 1.5em">SPONSORS</p>
-                    <p><a href = "https://www.freestyle.sh/" target = "_blank">freestyle.sh</a></p>
-                    <p><a href = "https://prhi.org/" target = "_blank"><img src = "img/pstc.png" style = "height: 4em" /></a></p>
-                    <p style = "display: flex; justify-content: center; align-items: center"><a href = "https://vly.ai" target = "_blank"><img src = "img/vly.svg" style = "height: 2em; margin-right: 1.5em" />vly.ai</a></p>
-                    <p><a href = "#" target = "_blank"><img src = "img/studio89.png" style = "height: 5em" /></a></p>
-                </div>
-                <div class = "container" id = "bottom">
-                    <p>MARCH 29-30</p>
-                    <p><a href = "https://maps.app.goo.gl/qrwhX1kmpuddmP67A">POLSKY EXCHANGE NORTH</a></p>
-                    <a href = "https://forms.gle/dhdksT9DzPskNhgW8" id = "register"><div class = "section" style = "background-color: #7dfa01">Register</div></a>
-                </div>
-            </div>
+            <div class="section" style="background-color: #b2b20d">Contact</div>
+          </div>
         </div>
-        <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style="width:100%"></a>
-    </body>
+        <div class="col" id="middle">
+          <div class="container" id="title">UNCOMMON HACKS</div>
+          <div class="container" id="tetris">
+            <canvas id="tetrisCanvas" width="200" height="400"></canvas>
+          </div>
+        </div>
+        <div class="col" id="right">
+          <div class="container" id="sponsors">
+            <p style="margin-bottom: 1.5em">SPONSORS</p>
+            <p>
+              <a href="https://www.freestyle.sh/" target="_blank"
+                >freestyle.sh</a
+              >
+            </p>
+            <p>
+              <a href="https://prhi.org/" target="_blank"
+                ><img src="img/pstc.png" style="height: 4em"
+              /></a>
+            </p>
+            <p
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <a href="https://vly.ai" target="_blank"
+                ><img
+                  src="img/vly.svg"
+                  style="height: 2em; margin-right: 1.5em" />vly.ai</a
+              >
+            </p>
+            <p>
+              <a href="#" target="_blank"
+                ><img src="img/studio89.png" style="height: 5em"
+              /></a>
+            </p>
+          </div>
+          <div class="container" id="bottom">
+            <p>MARCH 29-30</p>
+            <p>
+              <a href="https://maps.app.goo.gl/qrwhX1kmpuddmP67A"
+                >POLSKY EXCHANGE NORTH</a
+              >
+            </p>
+            <a href="https://forms.gle/dhdksT9DzPskNhgW8" id="register"
+              ><div class="section" style="background-color: #7dfa01">
+                Register
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+      <a
+        id="mlh-trust-badge"
+        style="
+          display: block;
+          max-width: 100px;
+          min-width: 60px;
+          position: fixed;
+          right: 50px;
+          top: 0;
+          width: 10%;
+          z-index: 10000;
+        "
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
+        target="_blank"
+        ><img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
+          alt="Major League Hacking 2025 Hackathon Season"
+          style="width: 100%"
+      /></a>
+    </div>
+
+    <!-- Mobile Layout -->
+    <div class="mobile-content">
+      <div class="top-container">
+        <div id="top-bar">Uncommon Hacks</div>
+      </div>
+      <div class="logo-container">
+        <img src="img/logo25notext.svg" alt="Uncommon Hacks Logo" />
+      </div>
+      <div class="register-container">
+        <a href="" class="register-button">Register</a>
+      </div>
+      <div id="info-container">
+        <div class="items"></div>
+      </div>
+    </div>
+  </body>
 </html>
