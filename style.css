@@ -226,14 +226,15 @@ body {
     padding: 1rem;
     width: -webkit-fill-available;
 
-    #top-bar {
-      padding: 15px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: white;
-      display: flex;
-      justify-content: center;
-    }
+  }
+
+  #top-bar {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
   }
 
   .logo-container {
