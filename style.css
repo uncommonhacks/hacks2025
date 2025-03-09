@@ -353,7 +353,32 @@ body {
     margin-bottom: 1em;
   }
 
-  .item-content-container a {
+  .mobile-sponsors {
+    text-align: center;
+  }
+
+  .mobile-sponsors p:not(:first-child) {
+    font-size: 2em;
+    margin-bottom: 1.25em;
+  }
+
+  .mobile-sponsors a {
+    color: white;
+    text-decoration: none;
+    font-family: "Beef'd";
+    font-size: 0.7em;
+  }
+
+  .mobile-sponsors a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .mobile-sponsors a:active {
+    color: rgb(200, 200, 200);
+  }
+
+  .item-content-container .contact-button {
     padding: 0.75em 2em;
     background-color: red;
     font-family: "Beef'd";

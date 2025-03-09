@@ -4,23 +4,25 @@ let faqInitialized = false;
 
 const sections = [
   { title: "Schedule", content: `<h6>Friday March 28 (Workshop Night)</h6>
-                <p><span class='schedule'>6:00PM</span> Workshop 1</p>
-                <p><span class='schedule'>7:00PM</span> Workshop 2</p>
+                <p><span>6:00PM</span> Workshop 1</p>
+                <p><span>7:00PM</span> Workshop 2</p>
                 <p>Workshops are hosted at the John Crerar Library. Please note that there are no sleeping accommodations for Friday night.</p>
                 <h6>Saturday March 29 (Day 1)</h6>
-                <p><span class='schedule'>9:00AM</span> Doors open, check-in, team formation, breakfast</p>
-                <p><span class='schedule'>10:00AM</span> Opening ceremony</p>
-                <p><span class='schedule'>10:30AM</span> Hacking begins</p>
-                <p><span class='schedule'>11:00AM</span> Sponsor workshops</p>
-                <p><span class='schedule'>12:00PM</span> Lunch</p>
-                <p><span class='schedule'>6:00PM</span> Dinner</p>
-                <p><span class='schedule'>9:00PM</span> Tetris Tournament</p>
+                <p><span>9:00AM</span> Doors open, check-in, team formation, breakfast</p>
+                <p><span>10:00AM</span> Opening ceremony</p>
+                <p><span>10:30AM</span> Hacking begins</p>
+                <p><span>11:00AM</span> Sponsor workshops</p>
+                <p><span>12:00PM</span> Lunch</p>
+                <p><span>3:00PM</span> Tetris Tournament</p>
+                <p><span>6:00PM</span> Dinner</p>
+                <p><span>9:00PM</span> Mystery Event</p>
                 <h6>Sunday March 30 (Day 2)</h6>
-                <p><span class='schedule'>9:00AM</span> Breakfast</p>
-                <p><span class='schedule'>10:00AM</span> Projects due, project fair</p>
-                <p><span class='schedule'>11:00AM</span> Judge deliberation</p>
-                <p><span class='schedule'>11:45AM</span> Awards, closing ceremony</p>
-                <p><span class='schedule'>12:30PM</span> Event ends!</p>` },
+                <p><span>12:00AM</span> Midnight Snack</p>
+                <p><span>9:00AM</span> Breakfast</p>
+                <p><span>10:00AM</span> Projects due, project fair</p>
+                <p><span>11:00AM</span> Judge deliberation</p>
+                <p><span>11:45AM</span> Awards, closing ceremony</p>
+                <p><span>12:30PM</span> Event ends!</p>` },
   { title: "About", content: `<p>Spend 24 hours working on an exciting project, leveling up your skills, and connecting with fellow hackers in this one-of-a-kind experience! In our 2025 edition of Hacks, we’re diving into an electrifying video game-themed adventure where every challenge is a new quest  and only the most creative minds will unlock victory.</p>
                 <p>With an overnight component that makes for a truly immersive experience, get ready to power up, strategize, and play your way to success! Will you conquer the final boss, or will the game beat you first?</p>
                 <p>Although Hacks will have prizes, we place more emphasis on learning and collaboration than some kind of competitive aspect. So even if you've never coded before, please do sign up! A successful Hacks team needs people with different skill sets, and if you would like to learn how to code, we'll have workshops to help you do so.</p>
@@ -41,11 +43,26 @@ const sections = [
                     <li><span class='faq'>What should I bring?</span> The basic thing is a laptop, and if you are planning on staying the night we recommend some additional items: a sleeping bag, change of clothes, and a toothbrush/toothpaste.</li>
                     <li><span class='faq'>So I don't have to stay the night?</span> You do not, although we may have limitations on when people can enter and exit the venue during the night.</li>
                 </ul>` },
+  { title: "Sponsors", content: `<div class='mobile-sponsors'><p>
+              <a href="https://www.freestyle.sh/" target="_blank"
+                >freestyle.sh</a
+              >
+            </p>
+            <p>
+              <a href="https://prhi.org/" target="_blank"
+                ><img src="img/pstc.png" style="height: 4em"
+              /></a>
+            </p>
+            <p>
+              <a href="https://www.fmjsurvey.com/" target="_blank"
+                ><img src="img/studio89.png" style="height: 5em"
+              /></a>
+            </p></div>` },
   { title: "MLH Code of Conduct", content: "Read the official code of conduct." },
-  { title: "Contact", content: `<p class='contact'><a style="background-color: rgb(25, 134, 67)" href="mailto:uncommonhacks@gmail.com" target="_blank">Email</a></p>
-                <p class='contact'><a style="background-color: rgb(69, 92, 237)" href="https://www.facebook.com/uncommonhacks" target="_blank">Facebook</a></p>
-                <p class='contact'><a style="background-color: rgb(231, 61, 129)" href="https://www.instagram.com/uncommonhacks/" target="_blank">Instagram</a></p>
-                <p class='contact'><a style="background-color: rgb(18, 43, 208)" href="https://www.linkedin.com/company/uncommonhacks/" target="_blank">LinkedIn</a></p>` },
+  { title: "Contact", content: `<p class='contact'><a style="background-color: rgb(25, 134, 67)" href="mailto:uncommonhacks@gmail.com" target="_blank" class="contact-button">Email</a></p>
+                <p class='contact'><a style="background-color: rgb(69, 92, 237)" href="https://www.facebook.com/uncommonhacks" target="_blank" class="contact-button">Facebook</a></p>
+                <p class='contact'><a style="background-color: rgb(231, 61, 129)" href="https://www.instagram.com/uncommonhacks/" target="_blank" class="contact-button">Instagram</a></p>
+                <p class='contact'><a style="background-color: rgb(18, 43, 208)" href="https://www.linkedin.com/company/uncommonhacks/" target="_blank" class="contact-button">LinkedIn</a></p>` },
 ];
 
 function initializePrizeFlash() {
