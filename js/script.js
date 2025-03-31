@@ -69,7 +69,7 @@ const sections = [
             <p>
               <a href="https://careeradvancement.uchicago.edu/" target="_blank"
                 ><span style="background-color: white; padding: 2px; display: inline-block"><img src="img/ucca.jpeg" style="height: 5em"
-              /></span></a><a href="https://careeradvancement.uchicago.edu/" target="_blank"
+              /></span></a><a href="https://itbridge-outreach.com/" target="_blank"
               ><img src="img/itbridge.png" style="height: 4em"
             /></a>
             </p>
