@@ -169,6 +169,14 @@ body {
     margin-bottom: 1.75em;
   }
 
+  #sponsors * {
+    vertical-align: middle;
+  }
+
+  #sponsors a:nth-child(2) {
+    margin-left: 2em;
+  }
+
   a {
     color: white;
     text-decoration: none;

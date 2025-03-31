@@ -44,21 +44,36 @@ const sections = [
                     <li><span class='faq'>What should I bring?</span> The basic thing is a laptop, and if you are planning on staying the night we recommend some additional items: a sleeping bag, change of clothes, and a toothbrush/toothpaste.</li>
                     <li><span class='faq'>So I don't have to stay the night?</span> You do not, although we may have limitations on when people can enter and exit the venue during the night.</li>
                 </ul>` },
-  { title: "Sponsors", content: `<div class='mobile-sponsors'><p>
+  { title: "Sponsors", content: `<div class='mobile-sponsors'><div class="container" id="sponsors">
+            <p>
               <a href="https://www.freestyle.sh/" target="_blank"
                 >freestyle.sh</a
-              >
+              ><a href="https://prhi.org/" target="_blank"
+              ><img src="img/pstc.png" style="height: 4em"
+            /></a>
+            </p>
+            <p
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              ">
+              <a href="https://vly.ai" target="_blank"
+                ><img
+                  src="img/vly.svg"
+                  style="height: 2em; margin-right: 1.5em" />vly.ai</a
+              ><a href="https://www.fmjsurvey.com/" target="_blank"
+              ><img src="img/studio89.png" style="height: 5em"
+            /></a>
             </p>
             <p>
-              <a href="https://prhi.org/" target="_blank"
-                ><img src="img/pstc.png" style="height: 4em"
-              /></a>
+              <a href="https://careeradvancement.uchicago.edu/" target="_blank"
+                ><span style="background-color: white; padding: 2px; display: inline-block"><img src="img/ucca.jpeg" style="height: 5em"
+              /></span></a><a href="https://careeradvancement.uchicago.edu/" target="_blank"
+              ><img src="img/itbridge.png" style="height: 4em"
+            /></a>
             </p>
-            <p>
-              <a href="https://www.fmjsurvey.com/" target="_blank"
-                ><img src="img/studio89.png" style="height: 5em"
-              /></a>
-            </p></div>` },
+          </div></div>` },
   { title: "MLH Code of Conduct", content: "Read the official code of conduct." },
   { title: "Contact", content: `<p class='contact'><a style="background-color: rgb(25, 134, 67)" href="mailto:uncommonhacks@gmail.com" target="_blank" class="contact-button">Email</a></p>
                 <p class='contact'><a style="background-color: rgb(69, 92, 237)" href="https://www.facebook.com/uncommonhacks" target="_blank" class="contact-button">Facebook</a></p>
